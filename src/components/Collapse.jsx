@@ -5,10 +5,16 @@ class Collapse extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            title: props.title,
-            text: props.text,
+            title: "",
+            text: "",
             open: false
         }
+    }
+    componentDidMount() {
+        this.setState((state, props) => ({
+            title: props.title,
+            text: props.text
+        }))
     }
     handleClick(e) {
         if(!this.state.open) {

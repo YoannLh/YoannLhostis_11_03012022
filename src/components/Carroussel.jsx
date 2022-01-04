@@ -5,26 +5,36 @@ class Carroussel extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            num: 1,
-            total: props.total
+            actualPicture: 1,
+            pictures: []
         }
+    }
+    componentDidMount() {
+        this.setState((state, props) => ({ pictures: props.pictures }))
     }
     handleClickLeft() {
         this.setState({
-            num: this.state.num - 1
+            actualPicture: this.state.actualPicture - 1
         })
     }
     handleClickRight() {
         this.setState({
-            num: this.state.num + 1
+            actualPicture: this.state.actualPicture + 1
         })
+    }
+    componentDidUpdate() {
+        document.getElementById("wrapperCarroussel").style.backgroundImage = `url(${this.state.pictures[this.state.actualPicture - 1]})`
     }
     render() {
         return (
-            <div className="wrapperCarroussel">
-                <div onClick={() => this.handleClickLeft()}>gauche</div>
-                <div>{this.state.num} / {this.state.total}</div>
-                <div onClick={() => this.handleClickRight()}>droite</div>
+            <div id="wrapperCarroussel">
+                {this.state.actualPicture === 1 ? 
+                null : 
+                <div className="left" onClick={() => this.handleClickLeft()}>gauche</div>}
+                <div className="countCarroussel">{this.state.actualPicture} / {this.state.pictures.length}</div>
+                {this.state.actualPicture === this.state.pictures.length ? 
+                null : 
+                <div className="right" onClick={() => this.handleClickRight()}>droite</div>}
             </div>
         )
     }

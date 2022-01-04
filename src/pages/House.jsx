@@ -10,17 +10,17 @@ class House extends Component {
             id: "",
             title: "",
             cover: "",
-            pictures: {},
-            total: "",
+            pictures: [],
             description: "",
             host: {},
             rating: "",
             location: "",
+            equipments: "",
             tags: ""
         }
-        this.totalPictures = 1;
     }
     componentDidMount() {
+        console.log("House did mount")
 		let params = new URLSearchParams(document.location.search.substring(1));
 		let id = params.get("id");
         for(const house of data) {
@@ -29,7 +29,7 @@ class House extends Component {
                     id: house.id,
                     title: house.title,
                     cover: house.cover,
-                    pictures: house.pictures,
+                    pictures: [...house.pictures],
                     description: house.description,
                     host: house.host,
                     rating: house.rating,
@@ -41,9 +41,10 @@ class House extends Component {
         }
 	}
     render() {
+        console.log("House render")
         return (
             <div>
-                <Carroussel total={this.totalPictures} />
+                <Carroussel pictures={this.state.pictures} />
                 <h1>{this.state.title}</h1>
                 <p>{this.state.location}</p>
                 <p>{this.state.host.name}</p>

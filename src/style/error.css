@@ -1,0 +1,12 @@
+
+.wrapperError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.numberError {
+    font-size: 15em;
+    color: #FF6060;
+}

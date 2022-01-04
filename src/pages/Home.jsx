@@ -5,7 +5,6 @@ import '../style/home.css'
 
 class Home extends Component {
     componentDidMount() {
-        console.log("DATA : ", data)
         
     }
     render() {

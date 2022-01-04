@@ -1,5 +1,6 @@
 
-.wrapperCarroussel {
+#wrapperCarroussel {
+    position: relative;
     display: flex;
     width: 95%;
     height: 300px;
@@ -7,4 +8,22 @@
     border: 1px solid black;
     margin: auto;
     align-items: center;
+    background: center;
+    background-image: cover;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+}
+
+.countCarroussel {
+    position: absolute;
+    left: 48%;
+    bottom: 20px;
+}
+
+.right {
+    position: absolute;
+    right: 0;
 }
