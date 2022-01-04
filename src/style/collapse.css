@@ -1,0 +1,16 @@
+
+.wrapperCollapse {
+    width: 30%;
+}
+
+.headerCollapse {
+    display: flex;
+    justify-content: space-between;
+    padding: auto 15px;
+    background: #FF6060;
+    color: white;
+}
+
+#textCollapse {
+    display: none;
+}

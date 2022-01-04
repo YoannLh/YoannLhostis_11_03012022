@@ -1,0 +1,17 @@
+
+.wrapperHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 50px;
+}
+
+.nav {
+    width: 15%;
+}
+
+.ul {
+    display: flex;
+    justify-content: space-between;
+    color: #ff6060;
+    font-family: 'Montserrat';
+}

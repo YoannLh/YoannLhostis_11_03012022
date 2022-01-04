@@ -1,0 +1,10 @@
+
+.wrapperFooter {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+}

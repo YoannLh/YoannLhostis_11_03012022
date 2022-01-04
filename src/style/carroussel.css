@@ -1,0 +1,10 @@
+
+.wrapperCarroussel {
+    display: flex;
+    width: 95%;
+    height: 300px;
+    justify-content: space-between;
+    border: 1px solid black;
+    margin: auto;
+    align-items: center;
+}
