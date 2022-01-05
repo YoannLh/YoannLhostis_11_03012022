@@ -4,6 +4,7 @@
     width: 340px;
     height: 340px;
     border-radius: 10px;
-    background: blue;
-    margin-top: 25px;
+    background: center;
+    background-image: cover;
+    margin: 20px auto;
 }

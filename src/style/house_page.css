@@ -1,0 +1,48 @@
+
+.wrapperHousePage {
+    margin: 25px 75px;
+}
+
+.wrapperTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleHouse {
+    color: #FF6060;
+}
+
+.location {
+    color: #FF6060;
+}
+
+.tags {
+    width: 27%;
+    display: flex;
+    justify-content: space-between;
+    color: #FF6060;
+}
+
+.tag {
+    padding: 5px 10px;
+    background: #FF6060;
+    color: white;
+    border-radius: 25px;
+}
+
+.wrapperHost {
+    display: flex;
+}
+
+.pictureHost {
+    width: 50px;
+    height: 50px;
+    background: center;
+    background-image: cover;
+    border-radius: 50%;
+}
+
+.fa-star {
+    font-size: 2em;
+    color: rgb(235, 235, 235);
+}

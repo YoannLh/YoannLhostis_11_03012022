@@ -1,18 +1,21 @@
 import React, { Component } from "react";
-import House from '../components/House'
+import Houses from '../components/Houses'
 import data from '../data/data.json'
 import '../style/home.css'
 
 class Home extends Component {
     componentDidMount() {
-        
+        console.log("DATA : ", data);
     }
     render() {
         return (
             <div className="wrapperHome">
+                <div className="imgHome"></div>
+                <div className="wrapperHouses">
                 {data.map(house => {
-                    return <House key={house.id} value={house.id} value2={house.title}/>
+                    return <Houses key={house.id} id={house.id} title={house.title} background={house.pictures[0]} />
                 })}
+            </div>
             </div>
         )
     }

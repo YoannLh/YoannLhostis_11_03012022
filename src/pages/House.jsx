@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import data from '../data/data.json'
 import Carroussel from '../components/Carroussel'
 import Collapse from '../components/Collapse'
+import '../style/house_page.css'
 
 class House extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class House extends Component {
             rating: "",
             location: "",
             equipments: "",
-            tags: ""
+            tags: []
         }
     }
     componentDidMount() {
@@ -35,24 +36,45 @@ class House extends Component {
                     rating: house.rating,
                     location: house.location,
                     equipments: house.equipments,
-                    tags: house.tags
+                    tags: [...house.tags]
                 })
             }
         }
 	}
+    renderStars() {
+        const allStars = [];
+        for(let i = 1; i <= 5; i++) {
+            allStars.push(<i key={i} className="fas fa-star" style={{}}></i>);
+        }
+        for(let i = 0; i < Number(this.state.rating); i++) {
+            allStars[i].props.style.color = "#FF6060";
+        }
+        return <div>{allStars}</div>
+    }
     render() {
-        console.log("House render")
         return (
-            <div>
+            <div className="wrapperHousePage">
                 <Carroussel pictures={this.state.pictures} />
-                <h1>{this.state.title}</h1>
-                <p>{this.state.location}</p>
-                <p>{this.state.host.name}</p>
-                <div>{this.state.host.picture}</div>
-                <p>{this.state.tags}</p>
-                <div>{this.state.rating}</div>
-                <Collapse title={"description"} text={this.state.description} />
-                <Collapse title={"equipments"} text={this.state.equipments} />
+                <div className="wrapperTitle">
+                    <div>
+                        <h1 className="titleHouse">{this.state.title}</h1>
+                        <p className="location">{this.state.location}</p>
+                        <div className="tags">
+                            {this.state.tags.map(tag =>
+                                <p key={tag} className="tag">{tag}</p>
+                            )}
+                        </div>  
+                    </div>
+                    <div>
+                        <div className="wrapperHost">
+                            <p>{this.state.host.name}</p>
+                            <div className="pictureHost" style={{background: `url(${this.state.host.picture})`}}></div>
+                        </div>
+                        <div>{this.renderStars()}</div>
+                    </div>
+                </div>
+                <Collapse title={"Description"} text={this.state.description} />
+                <Collapse title={"Equipements"} text={this.state.equipments} />
             </div>
         )
     }
