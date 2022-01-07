@@ -1,6 +1,6 @@
 
 .wrapperCollapse {
-    width: 30%;
+    width: 45%;
 }
 
 .headerCollapse {
@@ -13,4 +13,6 @@
 
 #textCollapse {
     display: none;
+    background: rgb(235, 235, 235);
+    color: #FF6060;
 }

@@ -73,8 +73,10 @@ class House extends Component {
                         <div>{this.renderStars()}</div>
                     </div>
                 </div>
-                <Collapse title={"Description"} text={this.state.description} />
-                <Collapse title={"Equipements"} text={this.state.equipments} />
+                <div className="wrapperCollapses">
+                    <Collapse title={"Description"} text={this.state.description} />
+                    <Collapse title={"Equipements"} text={this.state.equipments} />
+                </div>
             </div>
         )
     }

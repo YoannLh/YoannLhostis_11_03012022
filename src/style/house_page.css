@@ -46,3 +46,9 @@
     font-size: 2em;
     color: rgb(235, 235, 235);
 }
+
+.wrapperCollapses {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

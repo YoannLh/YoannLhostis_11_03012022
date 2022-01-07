@@ -15,14 +15,15 @@ class Collapse extends Component {
             title: props.title,
             text: props.text
         }))
+        document.getElementById(`textCollapse${this.props.title}`).style.display = "none" 
     }
     handleClick(e) {
         if(!this.state.open) {
             this.setState({open: true})
-            document.getElementById("textCollapse").style.display = "block"
+            document.getElementById(`textCollapse${this.props.title}`).style.display = "block"
         } else {
            this.setState({open: false}) 
-           document.getElementById("textCollapse").style.display = "none"
+           document.getElementById(`textCollapse${this.props.title}`).style.display = "none"
         }
     }
     render() {
@@ -32,7 +33,7 @@ class Collapse extends Component {
                     <p>{this.state.title}</p>
                     <div onClick={(e) => this.handleClick(e)}>fleche</div>
                 </div>
-                <p id="textCollapse">{this.state.text}</p>
+                <p id={`textCollapse${this.props.title}`}>{this.state.text}</p>
             </div>
         )
     }
