@@ -2,9 +2,8 @@
 #wrapperCarroussel {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 96%;
     height: 400px;
-    justify-content: space-between;
     border-radius: 25px;
     margin: auto;
     align-items: center;

@@ -1,0 +1,11 @@
+
+.wrapperAbout {
+    margin: 25px 75px;
+}
+
+.imgAbout {
+    width: 100%;
+    height: 275px;
+    background: rgb(235, 235, 235);
+    border-radius: 25px;
+}
