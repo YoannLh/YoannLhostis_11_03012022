@@ -31,11 +31,11 @@ class Carroussel extends Component {
             <div id="wrapperCarroussel">
                 {this.state.actualPicture === 1 ? 
                 null : 
-                <div className="left" onClick={() => this.handleClickLeft()}><i class="fas fa-chevron-left"></i></div>}
+                <div className="left" onClick={() => this.handleClickLeft()}><i className="fas fa-chevron-left"></i></div>}
                 <div className="countCarroussel">{this.state.actualPicture} / {this.state.pictures.length}</div>
                 {this.state.actualPicture === this.state.pictures.length ? 
                 null : 
-                <div className="right" onClick={() => this.handleClickRight()}><i class="fas fa-chevron-right"></i></div>}
+                <div className="right" onClick={() => this.handleClickRight()}><i className="fas fa-chevron-right"></i></div>}
             </div>
         )
     }

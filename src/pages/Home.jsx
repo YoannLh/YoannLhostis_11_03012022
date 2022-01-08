@@ -15,7 +15,7 @@ class Home extends Component {
                 {data.map(house => {
                     return <Houses key={house.id} id={house.id} title={house.title} background={house.pictures[0]} />
                 })}
-            </div>
+                </div>
             </div>
         )
     }

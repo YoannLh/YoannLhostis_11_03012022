@@ -65,12 +65,12 @@ class House extends Component {
                             )}
                         </div>  
                     </div>
-                    <div>
+                    <div className="wrapperAllInfosHost">
                         <div className="wrapperHost">
-                            <p>{this.state.host.name}</p>
+                            <p className="hostName">{this.state.host.name}</p>
                             <div className="pictureHost" style={{background: `url(${this.state.host.picture})`}}></div>
                         </div>
-                        <div>{this.renderStars()}</div>
+                        <div className="allStars">{this.renderStars()}</div>
                     </div>
                 </div>
                 <div className="wrapperCollapses">

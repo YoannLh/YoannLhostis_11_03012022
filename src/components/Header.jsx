@@ -8,11 +8,11 @@ class Header extends Component {
     render() {
         return (
             <div className="wrapperHeader">
-                <img src={logo} alt="logo_kasa"></img>
+                <img className="logo" src={logo} alt="logo_kasa"></img>
                 <nav className="nav">
                     <ul className="ul">
-                        <Link to='/'>Accueil</Link>
-                        <Link to='/about'>À propos</Link>
+                        <Link to='/'>ACCUEIL</Link>
+                        <Link to='/about'>À PROPOS</Link>
                     </ul>
                 </nav>
             </div>

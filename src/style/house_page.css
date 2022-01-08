@@ -1,11 +1,29 @@
 
 .wrapperHousePage {
-    margin: 25px 75px;
+    margin: 25px 105px;
+}
+
+@media screen and (max-width: 1024px) {
+	.wrapperHousePage {
+		margin: 20px 25px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.wrapperHousePage {
+        margin: 15px;
+	}
 }
 
 .wrapperTitle {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 400px) {
+	.wrapperTitle {
+        flex-direction: column;
+	}
 }
 
 .titleHouse {
@@ -17,21 +35,46 @@
 }
 
 .tags {
-    width: 27%;
     display: flex;
-    justify-content: space-between;
     color: #FF6060;
 }
 
 .tag {
+    margin-right: 10px;
     padding: 5px 10px;
     background: #FF6060;
     color: white;
-    border-radius: 25px;
+    border-radius: 15px;
+}
+
+.wrapperAllInfosHost {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 400px) {
+	.wrapperAllInfosHost {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+	}
 }
 
 .wrapperHost {
     display: flex;
+    margin: auto;
+}
+
+@media screen and (max-width: 400px) {
+	.wrapperHost {
+        margin: auto 0;
+	}
+}
+
+.hostName {
+    display: inline-block;
+    margin: auto;
+    color: #FF6060;
 }
 
 .pictureHost {
@@ -40,11 +83,28 @@
     background: center;
     background-image: cover;
     border-radius: 50%;
+    margin: auto auto auto 15px;
+}
+
+.allStars {
+    margin: auto;
+}
+
+@media screen and (max-width: 400px) {
+	.allStars {
+        margin: auto 0;
+	}
 }
 
 .fa-star {
     font-size: 2em;
     color: rgb(235, 235, 235);
+}
+
+@media screen and (max-width: 400px) {
+	.fa-star {
+        font-size: 1em;
+	}
 }
 
 .wrapperCollapses {

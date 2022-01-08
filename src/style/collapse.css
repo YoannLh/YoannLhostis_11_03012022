@@ -1,18 +1,23 @@
 
 .wrapperCollapse {
-    width: 45%;
+    width: 48%;
+    margin: 25px auto;
 }
 
 .headerCollapse {
     display: flex;
     justify-content: space-between;
-    padding: auto 15px;
+    padding: 0px 15px;
     background: #FF6060;
     color: white;
+    border-radius: 10px;
 }
 
-#textCollapse {
-    display: none;
-    background: rgb(235, 235, 235);
-    color: #FF6060;
+.wrapperChevronDown {
+    display: flex;
+}
+
+.fa-chevron-down {
+    margin: auto;
+    font-size: 1.7em;
 }

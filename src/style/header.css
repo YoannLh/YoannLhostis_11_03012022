@@ -1,12 +1,52 @@
 
+.logo {
+    height: 45px;
+}
+
+a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #ff6060;
+}
+
+@media screen and (max-width: 400px) {
+	a {
+        font-size: 0.9em;
+	}
+}
+
 .wrapperHeader {
     display: flex;
     justify-content: space-between;
-    margin: 25px 75px;
+    margin: 25px 105px;
+}
+
+@media screen and (max-width: 1024px) {
+	.wrapperHeader {
+		margin: 20px 25px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.wrapperHeader {
+        margin: 15px;
+	}
 }
 
 .nav {
-    width: 15%;
+    width: 22%;
+}
+
+@media screen and (max-width: 1024px) {
+	.nav {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.nav {
+        width: 55%;
+	}
 }
 
 .ul {
