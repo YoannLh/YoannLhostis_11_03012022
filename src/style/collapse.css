@@ -4,6 +4,13 @@
     margin: 25px auto;
 }
 
+@media screen and (max-width: 400px) {
+	.wrapperCollapse {
+        width: 100%;
+        margin: 10px 0;
+	}
+}
+
 .headerCollapse {
     display: flex;
     justify-content: space-between;

@@ -10,32 +10,40 @@ class Carroussel extends Component {
         }
     }
     componentDidMount() {
-        this.setState((state, props) => ({ pictures: props.pictures }))
-        
+        this.setState((state, props) => ({ pictures: props.pictures }))   
     }
     handleClickLeft() {
-        this.setState({
-            actualPicture: this.state.actualPicture - 1
-        })
+        if(this.state.actualPicture === 1) {
+            this.setState({
+                actualPicture: this.state.pictures.length
+            })
+        } else {
+            this.setState({
+                actualPicture: this.state.actualPicture - 1
+            })
+        }
     }
     handleClickRight() {
-        this.setState({
-            actualPicture: this.state.actualPicture + 1
-        })
+        if(this.state.actualPicture === this.state.pictures.length) {
+            this.setState({
+                actualPicture: 1
+            })
+        } else {
+            this.setState({
+                actualPicture: this.state.actualPicture + 1
+            })
+        }
     }
     componentDidUpdate() {
         document.getElementById("wrapperCarroussel").style.backgroundImage = `url(${this.state.pictures[this.state.actualPicture - 1]})`
+
     }
     render() {
         return (
             <div id="wrapperCarroussel">
-                {this.state.actualPicture === 1 ? 
-                null : 
-                <div className="left" onClick={() => this.handleClickLeft()}><i className="fas fa-chevron-left"></i></div>}
+                <div className="left" onClick={() => this.handleClickLeft()}><i className="fas fa-chevron-left"></i></div>
                 <div className="countCarroussel">{this.state.actualPicture} / {this.state.pictures.length}</div>
-                {this.state.actualPicture === this.state.pictures.length ? 
-                null : 
-                <div className="right" onClick={() => this.handleClickRight()}><i className="fas fa-chevron-right"></i></div>}
+                <div className="right" onClick={() => this.handleClickRight()}><i className="fas fa-chevron-right"></i></div>
             </div>
         )
     }
