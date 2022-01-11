@@ -1,6 +1,20 @@
 
+.imgBandeauAbout {
+    width: 95%;
+    height: 223px;
+    background: url('../assets/images/imgBandeauAbout.jpg') no-repeat center;
+    border-radius: 25px;
+    margin: auto;
+}
+
 .wrapperAbout {
     margin: 25px 75px;
+}
+
+@media screen and (max-width: 1024px) {
+	.wrapperAbout {
+        margin: 10px;
+	}
 }
 
 .imgAbout {

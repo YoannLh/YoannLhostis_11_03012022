@@ -7,9 +7,11 @@ class Error extends Component {
     render() {
         return (
             <div className="wrapperError">
-                <p className="numberError">404</p>
-                <p>Oups ! La page que vous demandez n'existe pas.</p>
-                <Link to='/'>Retournez à la page d'accueil</Link>
+                <div className="numberError">404</div>
+                <div className="oups">
+                    <p>Oups ! La page que vous demandez n'existe pas.</p>
+                    <Link to='/'>Retournez à la page d'accueil</Link>
+                </div>
             </div>
         )
     }

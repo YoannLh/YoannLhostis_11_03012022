@@ -15,7 +15,7 @@ class About extends Component {
     render() {
         return (
             <div className="wrapperAbout">
-                <div className="imgAbout"></div>
+                <div className="imgBandeauAbout"></div>
                 <Collapse title="Fiabilité" text={this.state.textFiability} />
                 <Collapse title="Respect" text={this.state.textRespect} />
                 <Collapse title="Service" text={this.state.textService} />

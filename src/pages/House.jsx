@@ -38,6 +38,9 @@ class House extends Component {
                     tags: [...house.tags]
                 })
             }
+            if(!data.find(house => house.id === id)) {
+                window.location.href = '*'
+            }
         }
 	}
     renderStars() {

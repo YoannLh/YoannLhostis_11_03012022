@@ -3,10 +3,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .numberError {
+    margin: 50px auto;
     font-size: 15em;
     color: #FF6060;
+}
+
+@media screen and (max-width: 400px) {
+	.numberError {
+        font-size: 8em;
+	}
+}
+
+.oups {
+    align-items: center;
+    text-align: center;
+    margin: 50px auto;
 }
