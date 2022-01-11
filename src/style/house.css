@@ -1,11 +1,11 @@
 
 .wrapperHouse {
+    position: relative;
     display: block;
     width: 340px;
     height: 340px;
     border-radius: 10px;
-    background: center;
-    background-image: cover;
+    background-size: cover;
     margin: 20px auto;
 }
 
@@ -13,4 +13,12 @@
 	.wrapperHouse {
         width: 100%;
 	}
+}
+
+.titleHouses {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    color: white;
+    font-size: 0.8em;
 }

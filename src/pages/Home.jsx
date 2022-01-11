@@ -4,9 +4,6 @@ import data from '../data/data.json'
 import '../style/home.css'
 
 class Home extends Component {
-    componentDidMount() {
-        console.log("DATA : ", data);
-    }
     render() {
         return (
             <div className="wrapperHome">

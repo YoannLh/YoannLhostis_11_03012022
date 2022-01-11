@@ -18,8 +18,8 @@ class Houses extends Component {
     }
     render() {
         return (
-            <Link to={`/house/?id=${this.state.key}`} className="wrapperHouse" style={{background: `url(${this.state.background}`}}>
-                <p>{this.state.title}</p>
+            <Link to={`/house/?id=${this.state.key}`} className="wrapperHouse" style={{backgroundImage: `url(${this.state.background}`, backgroundSize: "cover"}}>
+                <p className="titleHouses">{this.state.title}</p>
             </Link>
         )
     }

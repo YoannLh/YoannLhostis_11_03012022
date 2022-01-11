@@ -12,6 +12,11 @@ class Carroussel extends Component {
     componentDidMount() {
         this.setState((state, props) => ({ pictures: props.pictures }))   
     }
+    displayOrNotArrows() {
+        if(this.state.pictures.length === 1) {
+
+        }
+    }
     handleClickLeft() {
         if(this.state.actualPicture === 1) {
             this.setState({
@@ -41,9 +46,13 @@ class Carroussel extends Component {
     render() {
         return (
             <div id="wrapperCarroussel">
-                <div className="left" onClick={() => this.handleClickLeft()}><i className="fas fa-chevron-left"></i></div>
+                {this.state.pictures.length === 1
+                ? null
+                : <div className="left" onClick={() => this.handleClickLeft()}><i className="fas fa-chevron-left"></i></div>}
                 <div className="countCarroussel">{this.state.actualPicture} / {this.state.pictures.length}</div>
-                <div className="right" onClick={() => this.handleClickRight()}><i className="fas fa-chevron-right"></i></div>
+                {this.state.pictures.length === 1
+                ? null
+                : <div className="right" onClick={() => this.handleClickRight()}><i className="fas fa-chevron-right"></i></div>}
             </div>
         )
     }

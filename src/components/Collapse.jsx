@@ -44,7 +44,13 @@ class Collapse extends Component {
                         <i className="fas fa-chevron-down"></i>
                     </div>
                 </div>
-                <p id={`textCollapse${this.props.title}`}>{this.state.text}</p>
+                <div id={`textCollapse${this.props.title}`}>
+                    {Array.isArray(this.state.text) ?
+                    this.state.text.map((el) => (
+                        <p key={el}>{el}</p>
+                    ))
+                : <p>{this.state.text}</p>}
+                </div>
             </div>
         )
     }
